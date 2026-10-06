@@ -84,3 +84,7 @@ Do not commit `.env` files or database credentials. This repository includes pla
 - Backend/API URL: add after deploying the backend.
 - Database type: MongoDB Atlas.
 - Database connection confirmation: not yet verified; confirm using the deployed `/api/health` endpoint after configuring the Atlas connection string.
+
+
+Backend url - https://gupio-fullstack-option1.onrender.com
+Frontend - https://gupio-full-stack-option1-employee-m-iota.vercel.app/
