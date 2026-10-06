@@ -1,0 +1,31 @@
+﻿name,email,department,role,salary,start_date,office
+Marcus Chen,marcus.chen@example.com,Engineering,Senior Software Engineer,155000,15-03-2019,San Francisco
+Priya Sharma,priya.sharma@example.com,Engineering,Staff Engineer,178000,01-06-2019,San Francisco
+David Kim,david.kim@example.com,Engineering,Software Engineer,125000,10-01-2021,New York
+Rachel Torres,rachel.torres@example.com,Engineering,Engineering Manager,168000,20-02-2020,San Francisco
+James Okafor,james.okafor@example.com,Engineering,Junior Developer,92000,15-06-2024,Austin
+Lena Vogt,lena.vogt@example.com,Engineering,DevOps Engineer,140000,01-04-2022,New York
+Amir Patel,amir.patel@example.com,Engineering,Backend Engineer,132000,09-01-2023,London
+Sofia Lindberg,sofia.lindberg@example.com,Design,Lead Designer,145000,12-09-2019,New York
+Carlos Rivera,carlos.rivera@example.com,Design,UX Designer,112000,20-07-2021,San Francisco
+Hannah Becker,hannah.becker@example.com,Design,UI Designer,105000,01-11-2022,London
+Yuki Tanaka,yuki.tanaka@example.com,Design,Product Designer,118000,14-03-2023,San Francisco
+Olivia Martin,olivia.martin@example.com,Marketing,VP of Marketing,165000,22-04-2019,New York
+Ethan Brooks,ethan.brooks@example.com,Marketing,Content Strategist,95000,05-10-2021,Austin
+Nina Kowalski,nina.kowalski@example.com,Marketing,SEO Specialist,88000,15-08-2022,New York
+Daniel Ochoa,daniel.ochoa@example.com,Marketing,Marketing Analyst,91000,20-05-2023,Austin
+Samira Hassan,samira.hassan@example.com,Marketing,Social Media Manager,82000,08-01-2024,London
+Tyler Washington,tyler.washington@example.com,Sales,Sales Director,158000,30-11-2019,New York
+Jessica Huang,jessica.huang@example.com,Sales,Account Executive,110000,14-06-2020,San Francisco
+Ryan O'Brien,ryan.obrien@example.com,Sales,Account Executive,105000,22-03-2021,London
+Fatima Al-Rashid,fatima.alrashid@example.com,Sales,Sales Development Rep,72000,01-09-2023,Austin
+Kevin Dupont,kevin.dupont@example.com,Sales,Solutions Engineer,135000,17-01-2022,San Francisco
+Megan Stewart,megan.stewart@example.com,Sales,Account Manager,98000,11-03-2024,New York
+Laura Chen,laura.chen@example.com,HR,HR Director,148000,05-08-2019,New York
+Brian Nakamura,brian.nakamura@example.com,HR,HR Business Partner,105000,01-12-2020,San Francisco
+Chloe Dubois,chloe.dubois@example.com,HR,Recruiter,78000,23-05-2022,London
+Angela Moretti,angela.moretti@example.com,HR,People Operations,85000,10-07-2023,Austin
+Isaac Fernandez,isaac.fernandez@example.com,Engineering,Frontend Engineer,128000,19-09-2022,New York
+Sarah Mitchell,sarah.mitchell@example.com,Design,Design Systems Lead,138000,06-04-2020,San Francisco
+Omar Farah,omar.farah@example.com,Engineering,QA Engineer,95000,12-02-2024,London
+Natalie Park,natalie.park@example.com,Marketing,Growth Manager,108000,28-11-2021,San Francisco
