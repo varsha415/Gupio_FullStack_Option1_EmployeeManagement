@@ -144,9 +144,9 @@ function App() {
     setFormOpen(true);
   }
 
-  const engineering = employees.filter((employee) => employee.department.toLowerCase() === "engineering").length;
   const teamCount = employees.length;
   const departmentCount = departments.length;
+  const roleCount = new Set(employees.map((employee) => employee.designation.trim().toLowerCase())).size;
   const pageLabels = {
     overview: "Overview",
     people: "People",
@@ -220,7 +220,7 @@ function App() {
           {(activePage === "people" || activePage === "overview" || activePage === "departments") && <section className="stats-grid" aria-label="Team overview">
             <article className="stat-card stat-indigo"><div className="stat-top"><span>Total teammates</span><span className="stat-icon"><Users size={17} /></span></div><strong>{teamCount}</strong><small>People in your workspace</small><div className="stat-decoration">✳</div></article>
             <article className="stat-card stat-peach"><div className="stat-top"><span>Departments</span><span className="stat-icon"><Building2 size={17} /></span></div><strong>{departmentCount}</strong><small>Unique teams represented</small><div className="stat-decoration">✳</div></article>
-            <article className="stat-card stat-green"><div className="stat-top"><span>Engineering</span><span className="stat-icon"><BriefcaseBusiness size={17} /></span></div><strong>{engineering}</strong><small>People building great things</small><div className="stat-decoration">✳</div></article>
+            <article className="stat-card stat-green"><div className="stat-top"><span>Different roles</span><span className="stat-icon"><BriefcaseBusiness size={17} /></span></div><strong>{roleCount}</strong><small>Unique job titles represented</small><div className="stat-decoration">✳</div></article>
           </section>}
 
           {activePage === "people" && <section className="directory-section" id="directory">
