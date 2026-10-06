@@ -8,6 +8,7 @@ import EmployeeForm from "./components/EmployeeForm.jsx";
 import EmployeeList from "./components/EmployeeList.jsx";
 
 const supportedCurrencies = ["USD", "EUR", "GBP", "CAD", "AUD", "INR"];
+const adminName = "Varsha";
 
 function EmployeeDetails({ employee, onClose, onEdit, onDelete, currency }) {
   const initials = employee.name.trim().split(/\s+/).slice(0, 2).map((part) => part[0]).join("").toUpperCase();
@@ -196,8 +197,8 @@ function App() {
           <button type="button" className={`nav-item ${activePage === "help" ? "active" : ""}`} onClick={() => navigate("help")} aria-current={activePage === "help" ? "page" : undefined}><CircleHelp size={18} />Help & support</button>
           <button type="button" className={`nav-item ${activePage === "settings" ? "active" : ""}`} onClick={() => navigate("settings")} aria-current={activePage === "settings" ? "page" : undefined}><Settings2 size={18} />Settings</button>
           <div className="sidebar-menu-wrap">
-            <button type="button" className="sidebar-user" aria-expanded={openMenu === "sidebar-profile"} onClick={() => setOpenMenu(openMenu === "sidebar-profile" ? "" : "sidebar-profile")}><div className="user-avatar">JD</div><span><b>Jordan Davis</b><small>Workspace admin</small></span><ChevronDown size={15} /></button>
-            {openMenu === "sidebar-profile" && <div className="sidebar-popover profile-popover"><span className="popover-label">SIGNED IN AS</span><div className="profile-summary"><div className="user-avatar">JD</div><span><b>Jordan Davis</b><small>Workspace admin</small></span></div><button type="button" className="popover-action" onClick={() => navigate("settings")}>Open settings <ChevronRight size={15} /></button></div>}
+            <button type="button" className="sidebar-user" aria-expanded={openMenu === "sidebar-profile"} onClick={() => setOpenMenu(openMenu === "sidebar-profile" ? "" : "sidebar-profile")}><div className="user-avatar">V</div><span><b>{adminName}</b><small>Workspace admin</small></span><ChevronDown size={15} /></button>
+            {openMenu === "sidebar-profile" && <div className="sidebar-popover profile-popover"><span className="popover-label">SIGNED IN AS</span><div className="profile-summary"><div className="user-avatar">V</div><span><b>{adminName}</b><small>Workspace admin</small></span></div><button type="button" className="popover-action" onClick={() => navigate("settings")}>Open settings <ChevronRight size={15} /></button></div>}
           </div>
         </div>
       </aside>
@@ -207,12 +208,12 @@ function App() {
           <div className="breadcrumbs">Workspace <span>/</span> <b>{pageLabels[activePage]}</b></div>
           <div className="topbar-actions"><span className="date-label">{new Date().toLocaleDateString(undefined, { weekday: "short", month: "long", day: "numeric" })}</span>
             <div className="top-menu-wrap"><button type="button" className="top-icon" aria-label="Notifications" aria-expanded={openMenu === "notifications"} onClick={() => setOpenMenu(openMenu === "notifications" ? "" : "notifications")}><Bell size={18} /><i /></button>{openMenu === "notifications" && <div className="top-popover notification-popover"><b>You're all caught up</b><p>There are no new notifications right now.</p><button type="button" className="popover-action" onClick={() => { setOpenMenu(""); refresh(); }}>Refresh team data <RefreshCw size={14} /></button></div>}</div>
-            <div className="top-menu-wrap"><button type="button" className="top-avatar" aria-label="Open Jordan Davis menu" aria-expanded={openMenu === "top-profile"} onClick={() => setOpenMenu(openMenu === "top-profile" ? "" : "top-profile")}>JD</button>{openMenu === "top-profile" && <div className="top-popover profile-top-popover"><span className="popover-label">SIGNED IN AS</span><div className="profile-summary"><div className="user-avatar">JD</div><span><b>Jordan Davis</b><small>Workspace admin</small></span></div><button type="button" className="popover-action" onClick={() => navigate("settings")}>Open settings <ChevronRight size={15} /></button></div>}</div>
+            <div className="top-menu-wrap"><button type="button" className="top-avatar" aria-label={`Open ${adminName} menu`} aria-expanded={openMenu === "top-profile"} onClick={() => setOpenMenu(openMenu === "top-profile" ? "" : "top-profile")}>V</button>{openMenu === "top-profile" && <div className="top-popover profile-top-popover"><span className="popover-label">SIGNED IN AS</span><div className="profile-summary"><div className="user-avatar">V</div><span><b>{adminName}</b><small>Workspace admin</small></span></div><button type="button" className="popover-action" onClick={() => navigate("settings")}>Open settings <ChevronRight size={15} /></button></div>}</div>
           </div>
         </header>
         <div className="page-wrap">
           <section className="welcome-row">
-            <div><div className="eyebrow page-eyebrow">{activePage === "people" ? "YOUR PEOPLE, AT A GLANCE" : "STUDIO NORTH WORKSPACE"}</div><h1>{activePage === "people" || activePage === "overview" ? <>Good morning, Jordan <span className="wave">✦</span></> : pageLabels[activePage]}</h1><p>{activePage === "people" ? "Here's what's happening with your team today." : activePage === "overview" ? "A quick look at your people and teams." : activePage === "departments" ? "Explore your teams and the people in them." : activePage === "help" ? "Find your way around PeopleDesk." : "Manage your workspace preferences."}</p></div>
+            <div><div className="eyebrow page-eyebrow">{activePage === "people" ? "YOUR PEOPLE, AT A GLANCE" : "STUDIO NORTH WORKSPACE"}</div><h1>{activePage === "people" || activePage === "overview" ? <>Good morning, {adminName} <span className="wave">✦</span></> : pageLabels[activePage]}</h1><p>{activePage === "people" ? "Here's what's happening with your team today." : activePage === "overview" ? "A quick look at your people and teams." : activePage === "departments" ? "Explore your teams and the people in them." : activePage === "help" ? "Find your way around PeopleDesk." : "Manage your workspace preferences."}</p></div>
             {(activePage === "people" || activePage === "overview") && <button className="button button-primary add-button" onClick={openCreate}><Plus size={18} strokeWidth={2.5} /> Add teammate</button>}
           </section>
 
